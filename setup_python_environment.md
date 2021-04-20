@@ -33,22 +33,14 @@ Some useful command line commands:
 
 # 2. Checking the Python version from the command line
 
-Before going on it is important to understand that because of legacy requirements there are 2 version of Python in circulation.
-Python 2 and Python 3. Python 2 is now deprecated and does not receive any updates. The final version of Python 2 is 2.7.
-Python 3 is ongoing and will receive updates. The current version of Python 3 is 3.8(or 3.9 Beta).
-Owing to this it is possible that the command `python` will sometimes use Python 2 while the command `python3` will always use Python 3.
-The safest thing to do is to check the python version everytime you begin a new session.
+To check your version in the command line type `python -V` (Notice the uppercase V).
 
-To check your version in the command line type `python -V` (Notice the uppercase V). If the version is Python 2.7 try `python3 -v`.
+If this displays the correct version you can continue to **step 4**.
 
-If either command has the correct version you can continue to **step 4**.
+You can also check the available versions with `py -0`. This will list installed versions. To use a specific version use `py -3.9` replacing `3.9` with the version number.
 
-It is also worth checking if Python is installed but not available in the command line. Check the following directories to see if Python is installed. You can either do this from a file browser or by typing `ls "<PATH_TO_DIRECTORY>"` (Note the use of speech marks around the path):
+If the correct version is unavailable go to **step 3** or check **Troubleshooting Python Install** if you have already installed it.
 
- - `C:\Users\<YOUR_USER_NAME>\AppData\Local\Programs\Python\`
- - `C:\Program Files`
-
-If the required version of Python is listed go to the **Troubleshooting Python Install** at the bottom of this document.
 
 # 3. Installing the correct version of Python
 
@@ -91,3 +83,19 @@ To install from a requirement.txt file run `pip install -r requirements.txt` (re
 Instructions for running the model should generally be inside a README.md file at the root of the repository.
 
 To run a python file type `python <FILENAME>`
+ 
+ 
+ # Troubleshooting python install
+ 
+If you have installed the version and it is not showing up check the below steps.
+
+1. Check if Python is installed but not available in the command line. 
+Check the following directories to see if Python is installed. You can either do this from a file browser or by typing `ls "<PATH_TO_DIRECTORY>"` (Note the use of speech marks around the path):
+
+ - `C:\Users\<YOUR_USER_NAME>\AppData\Local\Programs\Python\`
+ - `C:\Program Files`
+
+ - If the required version of Python is listed got to `Edit environment variables for your account` by typing this into the windows search. 
+ - Go to the path variable in the user variables list then click `Edit...`. Make sure that the path to your python install is in this list.
+ - If it is not in the list use `New` to add it. Also add `<python path>/Scripts` to add the associated scripts.
+
