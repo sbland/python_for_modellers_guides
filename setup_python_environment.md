@@ -1,7 +1,8 @@
 Python Environment Setup
 ========================
 
-This is a tutorial series on setting up a Python Environment for Researchers
+This is a tutorial series on setting up a Python Environment for Researchers. 
+Note this tutorial uses Python and Pip instead of Anaconda.
 
 # Key Steps
 
