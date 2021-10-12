@@ -21,9 +21,9 @@ Note this tutorial uses Python and Pip instead of Anaconda.
 # 1. Install a command line tool
 
 Windows has 2 built in command line tools; cmd and PowerShell.
-There are also Unix based shells that can make some tasks easier including GitBash
+There are also Unix based shells that can make some tasks easier including GitBash.
 
-We will use powershell for this tutorial.
+To keep this tutorial simple we will use powershell for this tutorial.
 
 Some useful command line commands:
 
@@ -33,10 +33,13 @@ Some useful command line commands:
 
 # 2. Checking the Python version from the command line
 
+*Note: Some steps below use the python version 3.9. Make sure to replace this with the version required by the project *
+
 To check your version in the command line type `python -V` (Notice the uppercase V).
 
 If this displays the correct version you can continue to **step 4**.
 
+## Windows only
 You can also check the available versions with `py -0`. This will list installed versions. To use a specific version use `py -3.9` replacing `3.9` with the version number.
 
 If the correct version is unavailable go to **step 3** or check **Troubleshooting Python Install** if you have already installed it.
