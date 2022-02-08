@@ -21,9 +21,9 @@ Note this tutorial uses Python and Pip instead of Anaconda.
 # 1. Install a command line tool
 
 Windows has 2 built in command line tools; cmd and PowerShell.
-There are also Unix based shells that can make some tasks easier including GitBash.
+There are also Unix based shells that can make some tasks easier including GitBash and AnacondaPrompt.
 
-To keep this tutorial simple we will use powershell for this tutorial.
+To keep this tutorial simple we will use powershell and Anaconda Prompt for this tutorial.
 
 Some useful command line commands:
 
@@ -45,11 +45,27 @@ You can also check the available versions with `py -0`. This will list installed
 If the correct version is unavailable go to **step 3** or check **Troubleshooting Python Install** if you have already installed it.
 
 
-# 3. Installing the correct version of Python
+# 3. Installing the correct version of Python 
+## With Anaconda (Recommended)
+Follow the steps here: https://docs.anaconda.com/anaconda/install/ to install Anaconda (Note some institutions will have this included in a software installer(E.g. Software Center)
+Once installed follow the steps here (Skip the step that installs beautifulsoup4): https://conda.io/projects/conda/en/latest/user-guide/getting-started.html
+Make sure to use the Python version required by your project.
+You should now have a Python environment activated.
+
+## Without Anaconda
 
 For windows you can run the Python installer from the Python home page `https://www.python.org/downloads/`. Ensure you select the **Add Python 3.9 to PATH` checkbox.
 
 Once installed you need to restart the command line tool then follow step 2 again to check it is working.
+
+### Setup and activate a Python virtual environment
+
+Using a virtual environment in Python is important. It means anything you install will just be installed in this environment so you do not get version conflicts when switching between projects.
+
+To create a virtual environment first type `python -v` to check you have the correct version (You may need to use `python3` instead).
+Then run `python -m venv venv`. This will create a new virtual environment called **venv**. To activate the environment (from powershell) type `./venv/Scripts/activate.ps1`. If this has worked you should see `(venv)` at the start of the line.
+
+To deactivate type `deactivate`.
 
 # 4. Checking and Installing GIT
 
@@ -59,19 +75,13 @@ To check if git is installed and linked to your command line type `git --version
 
 # 5. Git pull the required Repository
 
-To obtain the files for the project go to the project git page then find the url to download (On github this is the green `Code` button). You will need to use the `HTTPS` link unless you have SSH setup.
+To obtain the files for the project go to the project git page then find the url to download (On github this is the green `Code` button). You will need to use the `HTTPS` link unless you have SSH setup (Check project README.md).
 Note if you have two factor auth setup your password will be an access token instead of your password.
 
 Run `git clone <REPO_URL>` inside the directory you want to copy to.
+### SSH
+If using ssh follow steps here : https://github.com/sbland/python_for_modellers_guides/blob/main/using_version_control.md#ssh
 
-# 6. Setup and activate a Python virtual environment
-
-Using a virtual environment in Python is important. It means anything you install will just be installed in this environment so you do not get version conflicts when switching between projects.
-
-To create a virtual environment first type `python -v` to check you have the correct version (You may need to use `python3` instead).
-Then run `python -m venv venv`. This will create a new virtual environment called **venv**. To activate the environment (from powershell) type `./venv/Scripts/activate.ps1`. If this has worked you should see `(venv)` at the start of the line.
-
-To deactivate type `deactivate`.
 
 # 7. Install the required python dependencies
 
