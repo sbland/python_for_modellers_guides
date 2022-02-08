@@ -46,8 +46,17 @@ Public repositories can be accessed using `git clone` above but private reposito
 
 It is recommended to setup a ssh key to allow secure access to private repositories.
 
-To setup your access key follow the instructions here: https://docs.github.com/en/enterprise-server@3.0/authentication/connecting-to-github-with-ssh/about-ssh
+#### SSH
+To setup your access key follow the instructions here: https://docs.github.com/en/authentication/connecting-to-github-with-ssh
 (If using a linux terminal such as Git Bash make sure to use the linux instructions)
+
+Instead of setting up the ssh-agent you can create a file in your home directory*  `~/.ssh/config` with the following contents:
+```sh
+host github.com
+  HostName github.com
+  IdentityFile ~/.ssh/id_rsa # Replace id_rsa with the keyname you created
+  User git
+```
 
 ## Helpful Tools
 
