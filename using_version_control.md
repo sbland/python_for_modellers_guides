@@ -1,11 +1,16 @@
 # Version Control(git)
 
 Version control is used to log changes to a file or directory. It allows easily sharing, reverting and explaining changes.
+This document is intended as a quick start guide to using git in your project. For more indepth guidance try the links below:
+https://www.atlassian.com/git/tutorials/learn-git-with-bitbucket-cloud
+https://git-scm.com/doc
+
 
 ## Glossary of terms
 
  - *git repo* - Also known as a git repository or just a repo. This is the name of a directory that has version control setup.
  - *git commit* - A git commit is a group of changes that are saved to the repo. 
+ - *merge conflict* - Your changes may overrides someone else changes if you merge the files together.
 
 ## Using Git
 
@@ -36,9 +41,33 @@ To make changes to a repository there are a number of steps:
 3) Once you are happy with your changes you can run `git commit -m "ADD A DESCRIPTION HERE"`. This will save all your changes to a commit.
 4) You can now push all your changes to the remote url using `git push`.
 
-### Pull requests
+### Pull Remote Changes
 
-...
+When changes have been made to the repository by someone else you need to pull the changes to your local system. 
+To do this use the command `git pull`. It is best to do this when you have no local file changes that have not been commited.
+
+#### Merge conficts
+If you have changed any files locally that have also been changed remotely you will have merge conflicts.
+Before you can push your changes to the remote repo you will need to resolve any conflicts in your files. 
+Git will inform you of any files with conflicts. To continue go into these files then find a merge conflict like the example below.
+Modify the file to resolve the conflict then save the file.
+
+Example merge conflit (from https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts)
+```
+<<<<<<< HEAD
+this is some content to mess with
+content to append
+=======
+totally different content to merge later
+>>>>>>> new_branch_to_merge_later
+```
+
+### Pull Requests(Merging your branch changes with main)
+Once you have completed work on a feature/update on your own branch you need to merge it back into the main branch.
+If you are working on the repo on your own you can simply switch to the main branch with `git checkout main` then merge your branch
+with `git merge <BRANCH_NAME>`.
+If you are working as part of a team it is best to use pull requests. These involve requesting the the repo admin/maintainer merges your code into the main branch.
+More information on pull requests can be found here: https://www.atlassian.com/git/tutorials/making-a-pull-request
 
 ### Authorization (HTTPS or SSH)
 
