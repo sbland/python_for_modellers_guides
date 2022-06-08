@@ -85,6 +85,7 @@ host github.com
   HostName github.com
   IdentityFile ~/.ssh/id_rsa # Replace id_rsa with the keyname you created
   User git
+  IdentitiesOnly yes
 ```
 
 ## Helpful Tools
